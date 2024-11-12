@@ -1,10 +1,11 @@
+import { Event } from "../types/Event";
 import { describe, it, expect } from "vitest";
 import { addEvent, deleteEvent } from "./helpers"; // Importing necessary helpers
 import { v4 as uuidv4 } from "uuid"; // Import UUID for testing purposes
 
 describe("addEvent", () => {
     it("should add an event with a unique ID to the events array", () => {
-        const events = [];
+        const events: Event[] = [];
         const newEvents = addEvent(events, "Meeting", "2024-12-01T10:00");
 
         expect(newEvents.length).toBe(1); // One event added
@@ -14,7 +15,7 @@ describe("addEvent", () => {
     });
 
     it("should ensure the generated ID is a valid UUID", () => {
-        const events = [];
+        const events: Event[] = [];
         const newEvents = addEvent(events, "Meeting", "2024-12-01T10:00");
         const uuidRegex =
             /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -23,7 +24,7 @@ describe("addEvent", () => {
     });
 
     it("should generate unique IDs for each added event", () => {
-        const events = [];
+        const events: Event[] = [];
         const newEvents = addEvent(events, "Meeting", "2024-12-01T10:00");
         const anotherNewEvents = addEvent(
             newEvents,
@@ -36,7 +37,7 @@ describe("addEvent", () => {
     });
 
     it("should not modify the original array", () => {
-        const events = [];
+        const events: Event[] = [];
 
         expect(events.length).toBe(0); // Original array remains unchanged
     });
