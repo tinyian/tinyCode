@@ -1,21 +1,16 @@
 import React, { useState } from "react";
 import "./App.css";
-import addEvent from "./utilities/addEvent"; // Importing the addEvent function
-import deleteEvent from "./utilities/deleteEvent"; // Importing the deleteEvent function
 
-// Define an Event type so we know what an event looks like
-type Event = {
-   id: number; // Unique ID for each event
-   name: string; // Name of the event
-   date: string; // Date/time of the event
-};
+import addEvent from "./utils/addEvent.ts"; // Importing the addEvent function
+import deleteEvent from "./utils/deleteEvent.ts"; // Importing the deleteEvent function
+import { Event } from "./types/Event.ts"; // Importing the Event type from the types folder to ensure that all files referencing it use the same consistent definition.
 
 const App: React.FC = () => {
    // State to hold the list of events
    const [events, setEvents] = useState<Event[]>([]);
 
    // Toggle for showing/hiding the form
-   const [showForm, setShowForm] = useState<boolean>(true);
+   const [showForm, setShowForm] = useState<boolean>(false);
 
    // Adds a new event to the events list
    const handleAddEvent = (e) => {
@@ -28,14 +23,15 @@ const App: React.FC = () => {
        setEvents(addEvent(events, name, date));
    };
 
+   
    // Deletes an event based on its ID
-   const handleDeleteEvent = (id: number) => {
+   const handleDeleteEvent = (id: string) => {
        setEvents(deleteEvent(events, id)); // Using the deleteEvent function
    };
 
    return (
        <div>
-           <h1>Welcome to my calendar app </h1>
+           <h1>Welcome to my calendar app!</h1>
            {/* List out each event, along with a Delete button for each */}
            <ul>
                {events.map((event) => (

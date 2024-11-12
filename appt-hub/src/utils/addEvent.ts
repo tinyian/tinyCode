@@ -1,4 +1,5 @@
-import { Event } from "../types/Event"; // Make sure to define an Event type if it's not done already.
+import { v4 as uuidv4 } from "uuid"; // Import the UUID library
+import { Event } from "../types/Event.ts"; // Import the Event type from the types folder
 
 // Adds a new event to the events list.
 // Parameters: events array, event name, event date.
@@ -7,7 +8,7 @@ const addEvent = (events: Event[], name: string, date: string): Event[] => {
     
     // Creating a new event object with a unique ID, name, and date
     const newEvent = {
-        id: Math.floor(Math.random() * 1000), // Unique ID
+        id: uuidv4(), // Unique ID with UUID library
         name,
         date,
     };
