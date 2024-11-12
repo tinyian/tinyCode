@@ -1,53 +1,134 @@
-/* General App styling */
+/* General Reset */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 20px;
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* A clean, modern font */
+  background-color: #1e1e2f; /* Deep, comforting dark background */
+  color: #e0e0e0; /* Soft white for text */
 }
 
+/* Header */
 h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #bb86fc; /* Purple accent for headings */
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 1px;
 }
 
-/* Event list styling */
+/* Button Styles */
+button {
+  background-color: #3a3a5a; /* Dark purple for buttons */
+  color: #e0e0e0; /* Soft text for readability */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #bb86fc; /* Lighter purple on hover */
+  color: #1e1e2f; /* Inverted text for emphasis */
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="datetime-local"] {
+  background-color: #2a2a3f; /* Darker input fields */
+  color: #e0e0e0;
+  border: 1px solid #444466;
+  border-radius: 4px;
+  padding: 8px 10px;
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #bb86fc; /* Purple focus effect */
+  box-shadow: 0 0 4px #bb86fc;
+}
+
+/* List of Events */
 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
 li {
-  font-size: 18px;
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #29293d; /* Card-like background */
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Button styling */
-button {
-  padding: 8px 12px;
-  font-size: 16px;
-  margin-top: 10px;
-  cursor: pointer;
-  background-color: #007bff;
+.delete-button {
+  background-color: #d32f2f; /* Bright red for delete */
   color: #fff;
-  border: none;
   border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
 }
 
-button:hover {
-  background-color: #0056b3;
+.delete-button:hover {
+  background-color: #f44336; /* Slightly brighter red on hover */
 }
 
-/* Form styling */
-form {
-  margin-top: 20px;
+/* Calendar Section */
+.calendar {
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 600px;
+  background: #1e1e2f;
+  border: 1px solid #444466;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-input[type="text"],
-input[type="datetime-local"] {
-  display: block;
-  width: 100%;
-  padding: 8px;
+.calendar h2 {
+  color: #bb86fc;
+  font-size: 1.5rem;
   margin-bottom: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
+}
+
+.calendar ul {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.calendar li {
+  background-color: #29293d;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 8px;
   border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.calendar li:hover {
+  background-color: #444466;
+  color: #bb86fc;
+}
+
+/* Add Animation for Modern Feel */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+div, ul, li, input, button {
+  animation: fadeIn 0.5s ease-in-out;
 }

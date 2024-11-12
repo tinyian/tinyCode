@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>0/26</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>0/26</span>
             </div>
         
             
@@ -80,9 +80,48 @@
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -92,28 +131,49 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { Event } from "../types/Event";<span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ></span></span></span>
-import { v4 as uuidv4 } from "uuid"; // Import the UUID library
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Event } from "../types/Event";
 &nbsp;
-// Add a new event to the event list
-<span class="cstat-no" title="statement not covered" >export const addEvent = (events: Event[], name: string, date: string): Event[] =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    const newEvent: Event = {</span>
-<span class="cstat-no" title="statement not covered" >        id: uuidv4(), // Generate a unique UUID for the event</span>
-<span class="cstat-no" title="statement not covered" >        name,</span>
-<span class="cstat-no" title="statement not covered" >        date,</span>
+// Generate a unique event ID (for production)
+<span class="cstat-no" title="statement not covered" >export const getEventId = (): number =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    return Math.floor(Math.random() * 10000);</span>
+<span class="cstat-no" title="statement not covered" >  };</span>
+  
+  // Add a new event to the event list
+<span class="cstat-no" title="statement not covered" >  export const addEvent = (events: Event[], name: string, date: string): Event[] =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    const newEvent = {</span>
+<span class="cstat-no" title="statement not covered" >      id: getEventId(), // In production, this generates a random ID</span>
+<span class="cstat-no" title="statement not covered" >      name,</span>
+<span class="cstat-no" title="statement not covered" >      date,</span>
 <span class="cstat-no" title="statement not covered" >    };</span>
 <span class="cstat-no" title="statement not covered" >    return [...events, newEvent];</span>
-<span class="cstat-no" title="statement not covered" >};</span>
-&nbsp;
-// Delete an event by ID
-<span class="cstat-no" title="statement not covered" >export const deleteEvent = (events: Event[], id: string): Event[] =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  };</span>
+  
+  // Delete an event by ID
+<span class="cstat-no" title="statement not covered" >  export const deleteEvent = (events: Event[], id: number): Event[] =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    return events.filter((event) =&gt; event.id !== id);</span>
-<span class="cstat-no" title="statement not covered" >};</span>
+<span class="cstat-no" title="statement not covered" >  };</span>
+  
+  // Edit/Update an event
+<span class="cstat-no" title="statement not covered" >  export const updateEvent = (</span>
+<span class="cstat-no" title="statement not covered" >    events: Event[],</span>
+<span class="cstat-no" title="statement not covered" >    id: number,</span>
+<span class="cstat-no" title="statement not covered" >    updatedEventData: Partial&lt;Omit&lt;Event, "id"&gt;&gt;</span>
+<span class="cstat-no" title="statement not covered" >  ): Event[] =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    return events.map((event) =&gt;</span>
+<span class="cstat-no" title="statement not covered" >      event.id === id ? { ...event, ...updatedEventData } : event</span>
+<span class="cstat-no" title="statement not covered" >    );</span>
+<span class="cstat-no" title="statement not covered" >  };</span>
+  
+  // Sort events by date
+<span class="cstat-no" title="statement not covered" >  export const sortEvents = (events: Event[]): Event[] =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    return [...events].sort((a, b) =&gt; new Date(a.date).getTime() - new Date(b.date).getTime());</span>
+<span class="cstat-no" title="statement not covered" >  };</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -121,7 +181,7 @@ import { v4 as uuidv4 } from "uuid"; // Import the UUID library
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-11-12T15:44:34.589Z
+                at 2024-11-12T22:56:18.073Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
