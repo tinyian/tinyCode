@@ -65,5 +65,3 @@ The app is functional, but there’s always room to grow! Here are some features
 This project has been an amazing exercise in bridging creativity with technical skills. It’s not just about functionality—it’s about building something polished, reliable, and reflective of my growth as a developer. I hope you enjoy exploring this little app as much as I enjoyed creating it!
 
 Feel free to check out the code, share feedback, or contribute ideas. Happy coding! 😊
-
-Nov 
