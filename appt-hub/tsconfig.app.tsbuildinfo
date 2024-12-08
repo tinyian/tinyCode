@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/types/event.ts","./src/types/testevent.ts","./src/utils/addevent.ts","./src/utils/deleteevent.ts","./src/utils/geteventid.ts","./src/utils/helpers.test.ts","./src/utils/helpers.ts","./src/utils/sortevents.ts","./src/utils/updateevent.ts"],"version":"5.6.3"}
